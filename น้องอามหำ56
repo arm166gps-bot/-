@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arm ❤️ Patch</title>
+
+<style>
+  body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: "Noto Sans Thai", sans-serif;
+    background: #ffdbe9;
+    color: #c8467a;
+  }
+
+  /* ตัวสไลด์ */
+  .slider {
+    width: 300vw;
+    display: flex;
+    transition: 0.6s;
+  }
+
+  .page {
+    width: 100vw;
+    height: 100vh;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  /* หน้าต่างๆ */
+  #p1 { background: linear-gradient(180deg,#ffdbe9,#ffe9f3); }
+  #p2 { background: linear-gradient(180deg,#ffe9f3,#fff6fa); }
+  #p3 { background: linear-gradient(180deg,#fff6fa,#ffeaf3); }
+
+  h1 {
+    font-size: 34px;
+    margin-bottom: 12px;
+    color: #d44b88;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 0 16px;
+  }
+
+  .nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  button {
+    padding: 10px 16px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: none;
+    background: #ffb7d4;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 8px #ffb7d457;
+  }
+
+  button:hover {
+    background: #ff9dc3;
+  }
+
+  /* หัวใจลอย */
+  .heart {
+    position: fixed;
+    bottom: -10px;
+    font-size: 20px;
+    animation: floatUp 4s linear infinite;
+    color: #ff7dab;
+    opacity: 0.7;
+  }
+
+  @keyframes floatUp {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-120vh) scale(1.8); opacity: 0; }
+  }
+
+  /* รูปตรงกลางหน้า */<img src="your-image.jpg" alt="profile image" style="width:300px; border-radius:10px;">
+  .imgbox {<img src="your-image.jpg" alt="profile image" style="width:300px; border-radius:10px;">
+    width: 200px;
+    height: 200px;
+    border-radius: 22px;
+    overflow: hidden;
+    margin: 20px auto;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+  }
+
+  .imgbox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+</style>
+</head>
+
+<body>
+
+<!-- เพลง -->
+<audio autoplay loop>
+  <!-- ใส่ไฟล์เพลงของคุณเอง เช่น .mp3 -->
+  <!-- ตัวอย่าง: <source src="song.mp3" type="audio/mp3"> -->
+</audio>
+
+<div class="slider" id="slider">
+
+  <!-- หน้า 1 -->
+  <div class="page" id="p1">
+    <h1>อาร์ม ❤️ พัช</h1>
+
+    <div class="imgbox">
+      <!-- อาร์มใส่รูปตัวเองหรือรูปคู่ -->
+      <img src="your-image.jpg" alt="รูปคู่"><img src="your-image.jpg" alt="profile image" style="width:300px; border-radius:10px;">
+    </div>
+
+    <p>
+      ตั้งแต่วันที่พัชเข้ามาในชีวิต…<br>
+      ทุกวันของอาร์มมันหวานขึ้นแบบบอกไม่ถูกเลย 💗<br><br>
+      เวลาได้คุยกับพัช โลกมันเบาลงเสมอ<br>
+      เวลาเห็นพัชยิ้ม หัวใจมันละลายทุกที<br><br>
+      อาร์มอยากให้พัรรู้ว่า<br>
+      ความรู้สึกนี้มันจริง และมันสวยงามมาก ❤️
+    </p>
+
+    <div class="nav">
+      <button onclick="go(1)">ต่อไป ➜</button>
+    </div>
+  </div>
+
+  <!-- หน้า 2 -->
+  <div class="page" id="p2">
+    <h1>เพราะพัชคือคนพิเศษที่สุด 🌸</h1>
+
+    <p>
+      พัชเป็นแรงบันดาลใจที่ทำให้อาร์มอยากเป็นคนที่ดีขึ้น<br>
+      อยากดูแล อยากอยู่ข้างๆ อยากเติมเต็มชีวิตไปด้วยกัน<br><br>
+      ขอบคุณที่เข้ามาเป็นแสงอ่อนๆ ในวันที่อาร์มเหนื่อย<br>
+      ขอบคุณที่ให้หัวใจอาร์มได้พักในที่ที่อบอุ่นที่สุด 💗<br><br>
+      ไม่รู้ว่าอนาคตจะเป็นยังไง…<br>
+      แต่ตอนนี้ อาร์มรู้แค่ว่า<br>
+      *อยากมีพัชอยู่ในทุกครั้งที่หันกลับมาเสมอ* ✨
+    </p>
+
+    <div class="nav">
+      <button onclick="go(0)">◀ กลับ</button>
+      <button onclick="go(2)">ต่อไป ➜</button>
+    </div>
+  </div>
+
+  <!-- หน้า 3 -->
+  <div class="page" id="p3">
+    <h1>จากหัวใจของอาร์ม<br>ถึงพัชคนเดียว 💗</h1>
+
+    <p>
+      อาร์มสัญญาว่าจะรักษาความรู้สึกนี้ให้ดีที่สุด<br>
+      จะไม่ทำให้พัชเสียใจ<br>
+      จะดูแล จะรัก จะเอาใจใส่<br><br>
+      ขอให้เราสองคนเดินไปด้วยกันช้าๆ แต่มั่นคง<br>
+      เก็บทุกวันดีๆ ไว้เป็นความทรงจำของเรา 💞<br><br>
+      รักพัชมากกว่าที่พัชคิดเสมอ ❤️
+    </p>
+
+    <div class="nav">
+      <button onclick="go(1)">◀ กลับ</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  let page = 0;
+  function go(p) {
+    page = p;
+    document.getElementById("slider").style.transform = `translateX(-${page * 100}vw)`;
+  }
+
+  // หัวใจลอยเรื่อยๆ
+  setInterval(() => {
+    let h = document.createElement("div");
+    h.className = "heart";
+    h.style.left = Math.random() * 100 + "vw";
+    h.style.fontSize = (Math.random() * 14 + 12) + "px";
+    h.innerHTML = "💗";
+    document.body.appendChild(h);
+    setTimeout(() => h.remove(), 4000);
+  }, 400);
+</script>
+
+</body>
+</html>
